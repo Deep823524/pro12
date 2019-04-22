@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if pkk == "Please Select one" %}
+        <font>Please Select one</font>
+    {% endif %}
+    {% if pkk != "Please Select one" %}
+    <table width="500" align="center">
+
+        <tr>
+            <th>Movies</th>
+            <th>Cartoons</th>
+            <th>Images</th>
+        </tr>
+
+        <tr>
+            <th>
+                <ol>
+                    {% for x in movies %}
+                        <li><font color="red">{{ x }}</font></li>
+                    {% endfor %}
+                </ol>
+            </th>
+            <th>
+                <ol>
+                    {% for x in cartoon %}
+                        <li><font color="green">{{ x }}</font></li>
+                    {% endfor %}
+                </ol>
+            </th>
+            <th>
+                <ol>
+                    {% for x in images %}
+                        <li><font color="blue">{{ x }}</font></li>
+                    {% endfor %}
+                </ol>
+            </th>
+        </tr>
+    </table>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/send/">
+        {% csrf_token %}
+        <table align="center">
+            <tr>
+                <th>
+                    Select
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="cb" value="Movies">
+                    Movies
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="cb" value="Cartoon">
+                    Cartoon
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="cb" value="Images">
+                    Images
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <button type="submit">SEND</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
